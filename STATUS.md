@@ -7,15 +7,15 @@
 ## Repository
 
 - Public GitHub repository: https://github.com/Aniket-a14/mothlight-last-bloom
-- Description: original 2D Unity arcade game for macOS about gathering fireflies, feeding a moonflower, and surviving a moonlit garden.
-- Topics: `unity`, `unity-game`, `2d-game`, `indie-game`, `macos`, `arcade-game`, `game-development`, `procedural-art`.
+- Description: A short, original 2D Unity arcade game: gather fireflies, revive a moonflower, and outmaneuver thorn spirits. macOS + Windows preview builds.
+- Topics: `unity`, `unity-game`, `unity-urp`, `2d-game`, `indie-game`, `arcade-game`, `game-development`, `procedural-art`, `macos`, `windows`, `itch-io`.
 - Unity Hub display name is `Mothlight: Last Bloom`; its source-control indicator is connected to this GitHub repository.
 - The macOS app bundle is a local build artifact and is not tracked in Git.
 - Public preview: https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview
 - Release archive: `Builds/releases/Mothlight-Last-Bloom-macOS-universal-preview.zip` (45 MB, universal arm64/x86_64); remote asset was downloaded and SHA-256 matched the local archive.
 - Windows x64 preview: `Builds/releases/Mothlight-Last-Bloom-Windows-x64-preview.zip` (37 MB). Unity 6000.3.26f1 build succeeded; the main executable is PE32+ x86-64; archive integrity passed. The ZIP excludes Unity's `DoNotShip` debug folder. The public GitHub asset was downloaded and its SHA-256 matched the local archive. This is a macOS build of the Windows player and has not been run on Windows. The ZIP includes an extraction/launch README and build provenance.
 - Release blocker: the app is ad-hoc signed, has no Developer ID identity, and is not notarized. Gatekeeper assessment rejected it (`spctl -a -vv --type execute`). Do not call this a friction-free release.
-- itch.io page: https://aniket-a14.itch.io/mothlight-last-bloom (public page returned HTTP 200 on 2026-11-01). The generated cover is visible and the macOS warning is on the page. The public HTML currently exposes no download button or ZIP asset, so a playable itch download is not verified.
+- itch.io page: https://aniket-a14.itch.io/mothlight-last-bloom (public page returned HTTP 200 on 2026-11-01). Both macOS and Windows downloads are listed publicly. The generated cover is visible and the macOS signing warning is on the page.
 - Store cover at `Marketing/Mothlight-Last-Bloom-itch-cover.png`; generated artwork is disclosed as AI-generated and kept outside Unity's `Assets` folder.
 
 ## Design and content
@@ -60,6 +60,8 @@ Read-only samples were taken on 2026-11-01 (Asia/Kolkata) while the standalone a
 
 ## Change log
 
+- 2026-11-01: Refined the public README, GitHub repository metadata, and preview release notes. Kept the release marked as a prerelease and stated platform verification limits.
+- 2026-11-01: Published the itch.io page and attached the macOS and Windows downloads; public page and package listings verified.
 - 2026-11-01: Added this state/evidence record after producing and launching the universal macOS build; recorded the passive Mac health snapshot and the native input bridge limitation.
 - 2026-11-01: Renamed the project folder and Unity product, published the source to a public GitHub repository with game-focused topics, linked it in Unity Hub, and rebuilt/launched the universal macOS app with the updated bundle identifier.
 - 2026-11-01: Published GitHub prerelease `v0.1.0-preview` with the universal macOS archive and checksum; downloaded the public archive and verified the hash. Gatekeeper rejected the ad-hoc signed app.
