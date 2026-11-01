@@ -1,0 +1,20 @@
+# Mothlight: Last Bloom
+
+An original 2D Unity arcade game for macOS.
+
+A tiny moth has one last night to wake the moonflower. Gather drifting fireflies with a held hum, carry them back, and release a bright pulse to feed the bloom and scatter the thorn spirits.
+
+## Play
+
+- **WASD / arrow keys** — flutter around the garden
+- **Hold Space or left mouse** — hum and pull nearby fireflies into orbit (up to 6)
+- **Release** — send the light outward; near the moonflower it feeds the bloom, and anywhere it knocks back thorn spirits
+- **Esc** — pause; **R** — restart
+
+Wake all three petals before the 3-minute night ends. Three thorn hits end the run. The title screen explains the loop before play begins.
+
+## Run
+
+Open `Mothlight.app` in `Builds/macOS/`. On first launch, macOS may ask you to confirm opening a locally built app. Open this project folder with Unity 6000.3.26f1 to inspect or edit the source.
+
+The macOS app bundle is a local build artifact and is not tracked in Git. The project uses original procedural artwork and synthesized audio; it has no network features, paid assets, or external asset packs. See [STATUS.md](STATUS.md) for current verification and known limits, and [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md) for asset details.

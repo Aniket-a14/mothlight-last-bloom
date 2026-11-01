@@ -1,0 +1,46 @@
+# Project status
+
+## Current milestone
+
+**Complete: local macOS mini-game build produced and launched.** The isolated Unity project is `Mothlight-Last-Bloom`; the main `IndeGameLab` checkout was not changed. The playable bundle is `Builds/macOS/Mothlight.app`.
+
+## Design and content
+
+- `Mothlight: Last Bloom` is a three-minute top-down arcade game about gathering fireflies and feeding a moonflower while avoiding thorn spirits.
+- Controls: WASD/arrow keys to move; hold Space or left mouse to gather; release to feed the nearby flower or repel spirits. Esc pauses; R restarts.
+- Artwork is original and drawn procedurally at runtime. Ambient music and chimes are synthesized at runtime. No external asset packs, paid services, or network features are used. See `ASSET_PROVENANCE.md` and `RESEARCH_NOTES.md`.
+
+## Verification evidence
+
+- Unity 6000.3.26f1 Edit Mode suite: **12 passed, 0 failed**, from `test-results.xml`.
+- Runtime Editor smoke from the preceding verification: gathering and delivery advanced (`carry=1 delivered=1`); pause/resume/restart/title/begin callbacks all fired in a fresh Play session.
+- Standalone build: Unity macOS build succeeded with no reported build errors or warnings. The executable is a universal Mach-O containing both `arm64` and `x86_64` slices.
+- Standalone launch: app process started and rendered the title/menu on the Apple M5 Metal device. Its Player.log contains initialization information and no error or exception entries.
+- Standalone start and movement input were exercised through the computer-use bridge; movement toward the lower-right edge was visible. Repeated thorn hits ended the short run before I could confirm the corrected escape response at the exact corner.
+
+## Corner movement fix (2026-11-01)
+
+- Fixed the moth retaining velocity into a clamped wall: boundary contact now cancels only the outward component, so inward steering responds immediately from edges and corners. Direction acceleration increased from 20 to 32 world units/s² for more responsive short inputs.
+- Added Edit Mode coverage for all four edges, blocked corner axes, and inward movement. Updated suite: **12 passed, 0 failed** (`test-results.xml`).
+- Rebuilt the universal macOS app successfully with no build errors or warnings and relaunched it. The input bridge intermittently reports `noWindowsAvailable`, and rapid thorn hits ended the short run before direct visual confirmation of precise corner recovery.
+
+## Mac health and performance snapshot
+
+Read-only samples were taken on 2026-11-01 (Asia/Kolkata) while the standalone app was open at its idle title screen:
+
+- Mothlight process: approximately **41 seconds elapsed**, **0.0% CPU** in the last `ps` sample, **364,704 KiB RSS**. This is an idle title-screen observation, not gameplay performance.
+- System CPU: **87.27% idle** in the one-shot `top` sample; load averages were 7.06 / 6.38 / 5.38.
+- macOS memory-pressure tool reported **62% free**. `top` separately reported 15 GiB used, 344 MiB unused, and 3,695 MiB compressed.
+- Swap: **2,438 MiB used / 3,072 MiB total** at the sample time.
+- `pmset -g therm`: no thermal warning and no performance warning recorded; no CPU power status recorded. This does not provide a measured temperature or sustained thermal test.
+- No FPS, frame-time, power, or gameplay-load benchmark was captured. Avoid interpreting the idle CPU sample as an active-play performance result.
+
+## Remaining review
+
+- Play a full round on the target Mac to assess game feel, audio level, win/loss flow, and sustained thermals under active play.
+- Existing implementation is playable and locally built; the above human/runtime review is still outstanding.
+
+## Change log
+
+- 2026-11-01: Added this state/evidence record after producing and launching the universal macOS build; recorded the passive Mac health snapshot and the native input bridge limitation.
+- 2026-11-01: Renamed the Unity project to `Mothlight: Last Bloom`, updated its bundle identifier, and prepared the isolated repository for public GitHub publication.

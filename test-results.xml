@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="12" result="Passed" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.0144897">
+  <test-suite type="TestSuite" id="1000" name="Mothlight" fullname="Mothlight" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.014490" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1016" name="Mothlight.EditModeTests.dll" fullname="./Library/ScriptAssemblies/Mothlight.EditModeTests.dll" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.011878" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="55708" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1017" name="Mothlight" fullname="Mothlight" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.011688" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1018" name="Tests" fullname="Mothlight.Tests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.011568" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="MothlightRulesTests" fullname="Mothlight.Tests.MothlightRulesTests" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.011282" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1014" name="BoundsStopOnlyVelocityPushingOutward" fullname="Mothlight.Tests.MothlightRulesTests.BoundsStopOnlyVelocityPushingOutward" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.007215" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1010" name="BoundsStopOnlyVelocityPushingOutward(-7.55f,0.0f,-3.0f,2.0f,0.0f,2.0f)" fullname="Mothlight.Tests.MothlightRulesTests.BoundsStopOnlyVelocityPushingOutward(-7.55f,0.0f,-3.0f,2.0f,0.0f,2.0f)" methodname="BoundsStopOnlyVelocityPushingOutward" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="725596753" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.004762" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="BoundsStopOnlyVelocityPushingOutward(7.55f,0.0f,3.0f,-2.0f,0.0f,-2.0f)" fullname="Mothlight.Tests.MothlightRulesTests.BoundsStopOnlyVelocityPushingOutward(7.55f,0.0f,3.0f,-2.0f,0.0f,-2.0f)" methodname="BoundsStopOnlyVelocityPushingOutward" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="443831365" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000040" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="BoundsStopOnlyVelocityPushingOutward(0.0f,-4.0f,2.0f,-3.0f,2.0f,0.0f)" fullname="Mothlight.Tests.MothlightRulesTests.BoundsStopOnlyVelocityPushingOutward(0.0f,-4.0f,2.0f,-3.0f,2.0f,0.0f)" methodname="BoundsStopOnlyVelocityPushingOutward" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="1738651837" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000018" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="BoundsStopOnlyVelocityPushingOutward(0.0f,4.0f,-2.0f,3.0f,-2.0f,0.0f)" fullname="Mothlight.Tests.MothlightRulesTests.BoundsStopOnlyVelocityPushingOutward(0.0f,4.0f,-2.0f,3.0f,-2.0f,0.0f)" methodname="BoundsStopOnlyVelocityPushingOutward" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="1571754210" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000017" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1015" name="CornerCollisionStopsBothBlockedAxesButKeepsInwardInputAvailable" fullname="Mothlight.Tests.MothlightRulesTests.CornerCollisionStopsBothBlockedAxesButKeepsInwardInputAvailable" methodname="CornerCollisionStopsBothBlockedAxesButKeepsInwardInputAvailable" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="327377464" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000582" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1007" name="DeliveryIsBoundedAndNeverNegative" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000759" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="DeliveryIsBoundedAndNeverNegative(0,6,6)" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative(0,6,6)" methodname="DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="2057508715" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000211" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="DeliveryIsBoundedAndNeverNegative(6,6,12)" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative(6,6,12)" methodname="DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="1203846487" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000021" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="DeliveryIsBoundedAndNeverNegative(20,6,21)" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative(20,6,21)" methodname="DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="606431351" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000016" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="DeliveryIsBoundedAndNeverNegative(21,6,21)" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative(21,6,21)" methodname="DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="903964938" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000018" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="DeliveryIsBoundedAndNeverNegative(4,-2,4)" fullname="Mothlight.Tests.MothlightRulesTests.DeliveryIsBoundedAndNeverNegative(4,-2,4)" methodname="DeliveryIsBoundedAndNeverNegative" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="1556543240" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000014" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1009" name="LossComesFromThreeHitsOrTheEndOfNight" fullname="Mothlight.Tests.MothlightRulesTests.LossComesFromThreeHitsOrTheEndOfNight" methodname="LossComesFromThreeHitsOrTheEndOfNight" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="1119456138" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000156" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="WinRequiresAllThreePetals" fullname="Mothlight.Tests.MothlightRulesTests.WinRequiresAllThreePetals" methodname="WinRequiresAllThreePetals" classname="Mothlight.Tests.MothlightRulesTests" runstate="Runnable" seed="678846893" result="Passed" start-time="2026-11-01 09:01:55Z" end-time="2026-11-01 09:01:55Z" duration="0.000037" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
