@@ -14,13 +14,14 @@
 - Public preview: https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview
 - Release archive: `Builds/releases/Mothlight-Last-Bloom-macOS-universal-preview.zip` (45 MB, universal arm64/x86_64); remote asset was downloaded and SHA-256 matched the local archive.
 - Release blocker: the app is ad-hoc signed, has no Developer ID identity, and is not notarized. Gatekeeper assessment rejected it (`spctl -a -vv --type execute`). Do not call this a friction-free release.
-- itch.io upload was not completed: the site presented an automated security verification page in the existing browser session. No bypass was attempted.
+- itch.io draft page: https://aniket-a14.itch.io/mothlight-last-bloom (visibility remains Draft). itch.io blocks file uploads until the creator account email is verified. The page copy and AI disclosure are saved; the macOS archive and cover image have not uploaded.
+- Store cover prepared at `Marketing/Mothlight-Last-Bloom-itch-cover.png`; generated artwork is disclosed as AI-generated and kept outside Unity's `Assets` folder.
 
 ## Design and content
 
 - `Mothlight: Last Bloom` is a three-minute top-down arcade game about gathering fireflies and feeding a moonflower while avoiding thorn spirits.
 - Controls: WASD/arrow keys to move; hold Space or left mouse to gather; release to feed the nearby flower or repel spirits. Esc pauses; R restarts.
-- Artwork is original and drawn procedurally at runtime. Ambient music and chimes are synthesized at runtime. No external asset packs, paid services, or network features are used. See `ASSET_PROVENANCE.md` and `RESEARCH_NOTES.md`.
+- In-game artwork is drawn procedurally at runtime; ambient music and chimes are synthesized at runtime. The itch.io marketing cover is separately AI-generated and is not included in the game. No external asset packs, paid services, or network features are used. See `ASSET_PROVENANCE.md` and `RESEARCH_NOTES.md`.
 
 ## Verification evidence
 
@@ -51,11 +52,12 @@ Read-only samples were taken on 2026-11-01 (Asia/Kolkata) while the standalone a
 
 - Play a full round on the target Mac to assess game feel, audio level, win/loss flow, and sustained thermals under active play.
 - Install a Developer ID Application certificate in the local keychain and notarize the app before promoting it beyond the GitHub preview. This Mac currently has zero valid code-signing identities, and full Xcode is not installed.
-- Publish the downloadable build on itch.io after signing/notarization and page assets are ready.
+- Verify the itch.io creator account email, then upload the archive and cover image and publish the page as a free preview.
 - Existing implementation is playable and locally built; the above human/runtime review is still outstanding.
 
 ## Change log
 
 - 2026-11-01: Added this state/evidence record after producing and launching the universal macOS build; recorded the passive Mac health snapshot and the native input bridge limitation.
 - 2026-11-01: Renamed the project folder and Unity product, published the source to a public GitHub repository with game-focused topics, linked it in Unity Hub, and rebuilt/launched the universal macOS app with the updated bundle identifier.
-- 2026-11-01: Published GitHub prerelease `v0.1.0-preview` with the universal macOS archive and checksum; downloaded the public archive and verified the hash. Gatekeeper rejected the ad-hoc signed app, so itch.io and normal public distribution remain pending Developer ID signing and notarization.
+- 2026-11-01: Published GitHub prerelease `v0.1.0-preview` with the universal macOS archive and checksum; downloaded the public archive and verified the hash. Gatekeeper rejected the ad-hoc signed app.
+- 2026-11-01: Created the itch.io project as a Draft with free-download pricing, gameplay description, Action genre, arcade tag, and Code/Graphics AI disclosures. The account requires email verification before file uploads; the cover image is prepared and provenance recorded locally.
