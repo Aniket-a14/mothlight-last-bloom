@@ -2,7 +2,15 @@
 
 ## Current milestone
 
-**Complete: local macOS mini-game build produced and launched.** The isolated Unity project is `Mothlight-Last-Bloom`; the main `IndeGameLab` checkout was not changed. The playable bundle is `Builds/macOS/Mothlight.app`.
+**Complete: public source repository and local macOS app.** The isolated Unity project folder is `Mothlight-Last-Bloom`, and its product title is `Mothlight: Last Bloom`. The main `IndeGameLab` checkout was not changed. The playable bundle is `Builds/macOS/Mothlight.app`.
+
+## Repository
+
+- Public GitHub repository: https://github.com/Aniket-a14/mothlight-last-bloom
+- Description: original 2D Unity arcade game for macOS about gathering fireflies, feeding a moonflower, and surviving a moonlit garden.
+- Topics: `unity`, `unity-game`, `2d-game`, `indie-game`, `macos`, `arcade-game`, `game-development`, `procedural-art`.
+- Unity Hub display name is `Mothlight: Last Bloom`; its source-control indicator is connected to this GitHub repository.
+- The macOS app bundle is a local build artifact and is not tracked in Git.
 
 ## Design and content
 
@@ -43,4 +51,4 @@ Read-only samples were taken on 2026-11-01 (Asia/Kolkata) while the standalone a
 ## Change log
 
 - 2026-11-01: Added this state/evidence record after producing and launching the universal macOS build; recorded the passive Mac health snapshot and the native input bridge limitation.
-- 2026-11-01: Renamed the Unity project to `Mothlight: Last Bloom`, updated its bundle identifier, and prepared the isolated repository for public GitHub publication.
+- 2026-11-01: Renamed the project folder and Unity product, published the source to a public GitHub repository with game-focused topics, linked it in Unity Hub, and rebuilt/launched the universal macOS app with the updated bundle identifier.
