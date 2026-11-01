@@ -2,7 +2,7 @@
 
 ## Current milestone
 
-**Complete: public source repository and local macOS app.** The isolated Unity project folder is `Mothlight-Last-Bloom`, and its product title is `Mothlight: Last Bloom`. The main `IndeGameLab` checkout was not changed. The playable bundle is `Builds/macOS/Mothlight.app`.
+**Published: public source repository and GitHub macOS preview.** The isolated Unity project folder is `Mothlight-Last-Bloom`, and its product title is `Mothlight: Last Bloom`. The main `IndeGameLab` checkout was not changed. The playable bundle is `Builds/macOS/Mothlight.app`.
 
 ## Repository
 
@@ -11,6 +11,10 @@
 - Topics: `unity`, `unity-game`, `2d-game`, `indie-game`, `macos`, `arcade-game`, `game-development`, `procedural-art`.
 - Unity Hub display name is `Mothlight: Last Bloom`; its source-control indicator is connected to this GitHub repository.
 - The macOS app bundle is a local build artifact and is not tracked in Git.
+- Public preview: https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview
+- Release archive: `Builds/releases/Mothlight-Last-Bloom-macOS-universal-preview.zip` (45 MB, universal arm64/x86_64); remote asset was downloaded and SHA-256 matched the local archive.
+- Release blocker: the app is ad-hoc signed, has no Developer ID identity, and is not notarized. Gatekeeper assessment rejected it (`spctl -a -vv --type execute`). Do not call this a friction-free release.
+- itch.io upload was not completed: the site presented an automated security verification page in the existing browser session. No bypass was attempted.
 
 ## Design and content
 
@@ -46,9 +50,12 @@ Read-only samples were taken on 2026-11-01 (Asia/Kolkata) while the standalone a
 ## Remaining review
 
 - Play a full round on the target Mac to assess game feel, audio level, win/loss flow, and sustained thermals under active play.
+- Install a Developer ID Application certificate in the local keychain and notarize the app before promoting it beyond the GitHub preview. This Mac currently has zero valid code-signing identities, and full Xcode is not installed.
+- Publish the downloadable build on itch.io after signing/notarization and page assets are ready.
 - Existing implementation is playable and locally built; the above human/runtime review is still outstanding.
 
 ## Change log
 
 - 2026-11-01: Added this state/evidence record after producing and launching the universal macOS build; recorded the passive Mac health snapshot and the native input bridge limitation.
 - 2026-11-01: Renamed the project folder and Unity product, published the source to a public GitHub repository with game-focused topics, linked it in Unity Hub, and rebuilt/launched the universal macOS app with the updated bundle identifier.
+- 2026-11-01: Published GitHub prerelease `v0.1.0-preview` with the universal macOS archive and checksum; downloaded the public archive and verified the hash. Gatekeeper rejected the ad-hoc signed app, so itch.io and normal public distribution remain pending Developer ID signing and notarization.

@@ -17,4 +17,8 @@ Wake all three petals before the 3-minute night ends. Three thorn hits end the r
 
 Open `Mothlight.app` in `Builds/macOS/`. On first launch, macOS may ask you to confirm opening a locally built app. Open this project folder with Unity 6000.3.26f1 to inspect or edit the source.
 
+## Download preview
+
+A macOS universal preview is available on the [GitHub Releases page](https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview). This preview is ad-hoc signed and not notarized; Gatekeeper may block it when downloaded. A Developer ID signed and notarized release is still needed for normal public distribution.
+
 The macOS app bundle is a local build artifact and is not tracked in Git. The project uses original procedural artwork and synthesized audio; it has no network features, paid assets, or external asset packs. See [STATUS.md](STATUS.md) for current verification and known limits, and [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md) for asset details.
