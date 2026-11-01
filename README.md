@@ -6,7 +6,7 @@
 
 [Play and download on itch.io](https://aniket-a14.itch.io/mothlight-last-bloom) · [GitHub preview release](https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview)
 
-> **Preview build:** macOS is not Developer ID signed or notarized, and Windows has not yet been tested on a Windows computer. Review the platform notes under [Download](#download) before downloading.
+> **Preview build:** You can play in a desktop browser without downloading. The macOS app is not Developer ID signed or notarized, and the Windows build has not yet been run on a Windows computer. Review the platform notes under [Download](#download).
 
 ## The game
 
@@ -26,10 +26,13 @@ Wake all three petals before the night ends. Three thorn hits end the run.
 
 ## Download
 
-Get the current preview from [itch.io](https://aniket-a14.itch.io/mothlight-last-bloom) or the [GitHub release page](https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview).
+Play the WebGL version directly on [itch.io](https://aniket-a14.itch.io/mothlight-last-bloom) with no download. Click **Run game**, then **Begin the Night**. The embedded version is set to 960×600 and has a fullscreen button. It was checked in Chrome on macOS for launch and keyboard movement; other browsers, operating systems, and mobile are not verified.
+
+To install a desktop preview, use [itch.io](https://aniket-a14.itch.io/mothlight-last-bloom) or the [GitHub release page](https://github.com/Aniket-a14/mothlight-last-bloom/releases/tag/v0.1.0-preview).
 
 | Platform | Package | Current status |
 | --- | --- | --- |
+| Browser (WebGL) | Embedded itch.io player | Starts and keyboard movement verified in Chrome on macOS. Mobile and other browsers/platforms are unverified. |
 | macOS | Universal Apple silicon + Intel ZIP | App launches on the development Mac. Ad-hoc signed and not notarized; Gatekeeper may block it. |
 | Windows | x64 ZIP | Build and archive were verified; launching and gameplay have not been tested on Windows. |
 
@@ -40,7 +43,7 @@ Extract the Windows ZIP, then run `Mothlight.exe` from the extracted folder. On 
 - **Engine:** Unity 6 (`6000.3.26f1`)
 - **Style:** original storybook-like pixel art drawn procedurally in the game
 - **Audio:** original ambient music and effects synthesized at runtime
-- **Platforms:** macOS universal and Windows x64 preview builds
+- **Platforms:** browser WebGL, macOS universal, and Windows x64 preview builds
 - **Networking:** none
 
 The game visuals are drawn by the project code and the audio is synthesized in-game. The separate itch.io cover image is AI-generated. See [asset provenance](ASSET_PROVENANCE.md) for details and [project status](STATUS.md) for build, test, and playtest evidence.

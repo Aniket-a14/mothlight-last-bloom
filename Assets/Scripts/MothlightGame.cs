@@ -46,7 +46,11 @@ namespace Mothlight
 
         void Awake()
         {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            Application.targetFrameRate = -1;
+#else
             Application.targetFrameRate = 60; Screen.SetResolution(1280, 800, FullScreenMode.Windowed);
+#endif
             SetupCamera(); SetupWorld(); SetupAudio(); SetupUi(); ShowState(State.Title);
         }
 
@@ -107,7 +111,13 @@ namespace Mothlight
             if (!es.GetComponent<InputSystemUIInputModule>()) { var module = es.gameObject.AddComponent<InputSystemUIInputModule>(); module.AssignDefaultActions(); }
             var c = new GameObject("Moonlit Garden UI", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
             canvas = c.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 50;
-            var scaler = c.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution = new Vector2(1280, 800); scaler.matchWidthOrHeight = .5f;
+            var scaler = c.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+#if UNITY_WEBGL && !UNITY_EDITOR
+            scaler.referenceResolution = new Vector2(960, 600);
+#else
+            scaler.referenceResolution = new Vector2(1280, 800);
+#endif
+            scaler.matchWidthOrHeight = .5f;
 
             hudPanel = Panel("HUD", new Vector2(0, 1), new Vector2(0, 1), new Vector2(32, -30), new Vector2(500, 126), new Color(MothPalette.Night.r, MothPalette.Night.g, MothPalette.Night.b, .78f));
             hud = Label(hudPanel.transform, "HUD text", "", 25, MothPalette.Moon, TextAnchor.UpperLeft, new Vector2(22, -14), new Vector2(450, 95));
@@ -124,7 +134,7 @@ namespace Mothlight
             titleText = Label(titlePanel.transform, "Title", "MOTHLIGHT", 64, MothPalette.Pollen, TextAnchor.MiddleCenter, new Vector2(0, 145), new Vector2(660, 90)); titleText.fontStyle = FontStyle.Bold;
             subtitle = Label(titlePanel.transform, "Subtitle", "LAST BLOOM", 28, MothPalette.Moth, TextAnchor.MiddleCenter, new Vector2(0, 98), new Vector2(660, 55));
             Label(titlePanel.transform, "Story", "One little moth. One last night.\nWake the moonflower before the dark settles in.", 23, MothPalette.Moon, TextAnchor.MiddleCenter, new Vector2(0, 10), new Vector2(620, 100));
-            Label(titlePanel.transform, "Instructions", "WASD / ARROWS   flutter\nHOLD SPACE / CLICK   gather fireflies\nRELEASE   feed the flower nearby; scatter thorns anywhere\nCarry up to 6 lights  •  3 hits  •  3 minutes", 18, MothPalette.Moth, TextAnchor.MiddleCenter, new Vector2(0, -92), new Vector2(650, 130));
+            Label(titlePanel.transform, "Instructions", "WASD / ARROWS   flutter\nHOLD SPACE / CLICK   gather fireflies\nRELEASE   feed the flower nearby; scatter thorns anywhere\nCarry up to 6 lights  •  3 hits  •  3 minutes", 16, MothPalette.Moth, TextAnchor.MiddleCenter, new Vector2(0, -92), new Vector2(650, 130));
             startButton = Button(titlePanel.transform, "Begin the night", new Vector2(0, -220), new Vector2(260, 58), StartRun);
             soundButton = Button(titlePanel.transform, "Sound: ON", new Vector2(0, -278), new Vector2(150, 32), ToggleSound, false);
             footer = Label(canvas.transform, "Version", "A small night garden · 1.0", 16, new Color(MothPalette.Moon.r, MothPalette.Moon.g, MothPalette.Moon.b, .62f), TextAnchor.LowerRight, new Vector2(-24, 18), new Vector2(330, 30)); footer.rectTransform.anchorMin = footer.rectTransform.anchorMax = new Vector2(1, 0); footer.rectTransform.pivot = Vector2.one;
@@ -158,7 +168,7 @@ namespace Mothlight
         {
             var go = new GameObject(name, typeof(RectTransform), typeof(Text)); go.transform.SetParent(parent, false); var rt = go.GetComponent<RectTransform>();
             rt.anchorMin = rt.anchorMax = new Vector2(.5f, .5f); rt.pivot = new Vector2(.5f, .5f); rt.anchoredPosition = pos; rt.sizeDelta = dimensions;
-            var text = go.GetComponent<Text>(); text.font = UiFont(); text.text = value; text.fontSize = size; text.color = color; text.alignment = anchor; text.horizontalOverflow = HorizontalWrapMode.Wrap; text.verticalOverflow = VerticalWrapMode.Overflow; text.supportRichText = false; return text;
+            var text = go.GetComponent<Text>(); text.font = UiFont(); text.text = value; text.fontSize = size; text.color = color; text.alignment = anchor; text.horizontalOverflow = HorizontalWrapMode.Wrap; text.verticalOverflow = VerticalWrapMode.Overflow; text.lineSpacing = 1.5f; text.supportRichText = false; return text;
         }
         Button Button(Transform parent, string value, Vector2 pos, Vector2 dimensions, UnityEngine.Events.UnityAction action, bool primary = true)
         {
